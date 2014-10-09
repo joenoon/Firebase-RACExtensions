@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Firebase-RACExtensions', :exclusive => true do
+  pod "Firebase-RACExtensions", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "Firebase-RACExtensions", :path => "../"
+
+  
+end
