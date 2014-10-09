@@ -1,0 +1,5 @@
+#include "Pods-Firebase-RACExtensions-Firebase-RACExtensions.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/Firebase-RACExtensions" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Firebase-RACExtensions"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

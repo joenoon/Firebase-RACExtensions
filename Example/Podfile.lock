@@ -1,0 +1,14 @@
+PODS:
+  - Firebase-RACExtensions (0.1.0)
+
+DEPENDENCIES:
+  - Firebase-RACExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  Firebase-RACExtensions:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Firebase-RACExtensions: c1852c0595b56802b1b5b0f43c2daff49d45e1da
+
+COCOAPODS: 0.34.2
