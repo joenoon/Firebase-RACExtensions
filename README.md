@@ -1,15 +1,22 @@
 # Firebase-RACExtensions
 
-[![CI Status](http://img.shields.io/travis/Joe Noon/Firebase-RACExtensions.svg?style=flat)](https://travis-ci.org/Joe Noon/Firebase-RACExtensions)
-[![Version](https://img.shields.io/cocoapods/v/Firebase-RACExtensions.svg?style=flat)](http://cocoadocs.org/docsets/Firebase-RACExtensions)
-[![License](https://img.shields.io/cocoapods/l/Firebase-RACExtensions.svg?style=flat)](http://cocoadocs.org/docsets/Firebase-RACExtensions)
-[![Platform](https://img.shields.io/cocoapods/p/Firebase-RACExtensions.svg?style=flat)](http://cocoadocs.org/docsets/Firebase-RACExtensions)
+Adds rac_* signals for Firebase:
 
-## Usage
+- rac_valueSignal
+- rac_addedSignal
+- rac_movedSignal
+- rac_changedSignal
+- rac_removedSignal
+- rac_authWithCustomTokenSignal:
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+For example:
 
-## Requirements
+```objc
+Firebase* postsRef = [[Firebase alloc] initWithUrl: @"https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts"];
+[[postsRef rac_valueSignal] subscribeNext:^(FDataSnapshot *snapshot) {
+  // latest snapshot
+}];
+```
 
 ## Installation
 
@@ -17,6 +24,10 @@ Firebase-RACExtensions is available through [CocoaPods](http://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
     pod "Firebase-RACExtensions"
+
+## Todo
+
+The example app is currently blank, but should eventually contain a simple demo of these signals.
 
 ## Author
 
