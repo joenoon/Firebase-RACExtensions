@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Firebase-RACExtensions"
-  s.version          = "0.1.1"
+  s.version          = "0.2.0"
   s.summary          = "RACExtensions for Firebase"
   s.description      = <<-DESC
                        Adds rac_* methods for Firebase:
