@@ -1,0 +1,32 @@
+{
+  "name": "Firebase-RACExtensions",
+  "version": "0.1.0",
+  "summary": "RACExtensions for Firebase",
+  "description": "                       Adds rac_* methods for Firebase to make asynchronous requests to Firebase a bit easier to make!\n\n                       /// type FEventTypeValue, nexts FDataSnapshot *snapshot or sends error\n                       - rac_valueSignal\n\n                       /// type FEventTypeChildAdded, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error\n                       - rac_addedSignal\n\n                       /// type FEventTypeChildMoved, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error\n                       - rac_movedSignal\n\n                       /// type FEventTypeChildChanged, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error\n                       - rac_changedSignal\n\n                       /// type FEventTypeChildRemoved, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error\n                       - rac_removedSignal\n\n                       - rac_authWithCustomTokenSignal:\n\n",
+  "homepage": "https://github.com/joenoon/Firebase-RACExtensions",
+  "license": "MIT",
+  "authors": {
+    "Joe Noon": "joenoon@gmail.com",
+    "Henry Sav": "henrysavit@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/joenoon/Firebase-RACExtensions.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes",
+  "dependencies": {
+    "ReactiveCocoa": [
+      "~> 2.3"
+    ],
+    "Firebase": [
+      "~> 2.3.2"
+    ]
+  },
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "\"${PODS_ROOT}/Firebase\""
+  }
+}

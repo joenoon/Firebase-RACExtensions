@@ -1,14 +1,26 @@
 PODS:
-  - Firebase-RACExtensions (0.1.0)
+  - Firebase (2.3.2)
+  - Firebase-RACExtensions (0.1.0):
+    - Firebase (~> 2.3.2)
+    - ReactiveCocoa (~> 2.3)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
 
 DEPENDENCIES:
   - Firebase-RACExtensions (from `../`)
 
 EXTERNAL SOURCES:
   Firebase-RACExtensions:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Firebase-RACExtensions: c1852c0595b56802b1b5b0f43c2daff49d45e1da
+  Firebase: 02fbeacfe19970856c872321788194524f21ffed
+  Firebase-RACExtensions: 7e182315f949a4d8c862086995f49526b8562222
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
-COCOAPODS: 0.34.2
+COCOAPODS: 0.37.2

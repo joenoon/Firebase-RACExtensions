@@ -24,7 +24,7 @@
 
 - (RACSignal *)rac_addedSignal {
   return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
-    FirebaseHandle handle = [self observeEventType:FEventTypeChildAdded andPreviousSiblingNameWithBlock:^(FDataSnapshot *snapshot, NSString *prevName) {
+    FirebaseHandle handle = [self observeEventType:FEventTypeChildAdded andPreviousSiblingKeyWithBlock:^(FDataSnapshot *snapshot, NSString *prevName) {
       [subscriber sendNext:RACTuplePack(snapshot, prevName)];
     } withCancelBlock:^(NSError *error) {
       [subscriber sendError:error];
@@ -35,9 +35,10 @@
   }] setNameWithFormat:@"rac_addedSignal"];
 }
 
+
 - (RACSignal *)rac_movedSignal {
   return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
-    FirebaseHandle handle = [self observeEventType:FEventTypeChildMoved andPreviousSiblingNameWithBlock:^(FDataSnapshot *snapshot, NSString *prevName) {
+    FirebaseHandle handle = [self observeEventType:FEventTypeChildMoved andPreviousSiblingKeyWithBlock:^(FDataSnapshot *snapshot, NSString *prevName) {
       [subscriber sendNext:RACTuplePack(snapshot, prevName)];
     } withCancelBlock:^(NSError *error) {
       [subscriber sendError:error];
@@ -49,16 +50,21 @@
 }
 
 - (RACSignal *)rac_changedSignal {
-  return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
-    FirebaseHandle handle = [self observeEventType:FEventTypeChildChanged andPreviousSiblingNameWithBlock:^(FDataSnapshot *snapshot, NSString *prevName) {
-      [subscriber sendNext:RACTuplePack(snapshot, prevName)];
-    } withCancelBlock:^(NSError *error) {
-      [subscriber sendError:error];
-    }];
-    return [RACDisposable disposableWithBlock:^{
-      [self removeObserverWithHandle:handle];
-    }];
-  }] setNameWithFormat:@"rac_changedSignal"];
+  return
+    
+    [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
+        FirebaseHandle handle = [self observeEventType:FEventTypeChildChanged andPreviousSiblingKeyWithBlock:^(FDataSnapshot *snapshot, NSString *prevName) {
+              [subscriber sendNext:RACTuplePack(snapshot, prevName)];
+        }
+                                       withCancelBlock:^(NSError *error) {
+                                          [subscriber sendError:error];
+                                        }];
+        
+        return [RACDisposable disposableWithBlock:^{
+          [self removeObserverWithHandle:handle];
+        }];
+        
+      }] setNameWithFormat:@"rac_changedSignal"];
 }
 
 - (RACSignal *)rac_removedSignal {
