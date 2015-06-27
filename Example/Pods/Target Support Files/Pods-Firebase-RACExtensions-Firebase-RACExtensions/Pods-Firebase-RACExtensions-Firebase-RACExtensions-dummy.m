@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Firebase_RACExtensions_Firebase_RACExtensions : NSObject
+@end
+@implementation PodsDummy_Pods_Firebase_RACExtensions_Firebase_RACExtensions
+@end

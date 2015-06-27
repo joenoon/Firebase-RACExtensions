@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0D82B32B5C218ED2678299C1"
+               BlueprintIdentifier = "7B173A0F5A4182C3C3936F58"
                BuildableName = "libPods-Tests-Firebase-RACExtensions.a"
                BlueprintName = "Pods-Tests-Firebase-RACExtensions"
                ReferencedContainer = "container:Pods.xcodeproj">

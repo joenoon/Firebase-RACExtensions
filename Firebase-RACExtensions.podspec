@@ -5,19 +5,14 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        Adds rac_* methods for Firebase to make asynchronous requests to Firebase a bit easier to make!
 
-                       /// type FEventTypeValue, nexts FDataSnapshot *snapshot or sends error
                        - rac_valueSignal
 
-                       /// type FEventTypeChildAdded, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error
                        - rac_addedSignal
 
-                       /// type FEventTypeChildMoved, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error
                        - rac_movedSignal
 
-                       /// type FEventTypeChildChanged, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error
                        - rac_changedSignal
 
-                       /// type FEventTypeChildRemoved, nexts RACTuplePack(FDataSnapshot *snapshot, NSString *prevName) or sends error
                        - rac_removedSignal
 
                        - rac_authWithCustomTokenSignal:

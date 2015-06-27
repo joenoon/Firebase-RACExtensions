@@ -80,13 +80,16 @@
 
 
 /**
+ * This method is deprecated.
+ *
  * @return An FMutableData instance containing the data at the parent location, or nil if this is the top-most location
  */
-@property (strong, readonly, nonatomic) FMutableData* parent;
+@property (strong, readonly, nonatomic) FMutableData* parent __attribute__((deprecated("Deprecated. Do not use.")));;
 
 
 /**
  * To modify the data contained by this instance of FMutableData, set this to any of the native types support by Firebase:
+ *
  * * NSNumber (includes BOOL)
  * * NSDictionary
  * * NSArray
@@ -102,6 +105,7 @@
 
 /**
  * Set this property to update the priority of the data at this location. Can be set to the following types:
+ *
  * * NSNumber
  * * NSString
  * * nil / NSNull to remove the priority
@@ -131,9 +135,9 @@
 
 
 /**
- * @return The name of this node, or nil if it is the top-most location
+ * @return The key name of this node, or nil if it is the top-most location
  */
-@property (readonly, nonatomic, strong) NSString* name;
+@property (readonly, nonatomic, strong) NSString* key;
 
 
 @end
