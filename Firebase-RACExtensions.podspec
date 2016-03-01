@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Firebase-RACExtensions"
-  s.version          = "0.1.0"
+  s.version          = "0.3.0"
   s.summary          = "RACExtensions for Firebase"
   s.description      = <<-DESC
                        Adds rac_* methods for Firebase to make asynchronous requests to Firebase a bit easier to make!
