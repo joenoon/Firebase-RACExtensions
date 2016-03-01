@@ -23,12 +23,11 @@ Pod::Spec.new do |s|
   s.author           = { "Joe Noon" => "joenoon@gmail.com" , "Henry Sav" => "henrysavit@gmail.com"}
   s.source           = { :git => "https://github.com/joenoon/Firebase-RACExtensions.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes'
 
   s.dependency 'ReactiveCocoa', '~> 4.0'
-  s.dependency 'Firebase', '~> 2.3.2'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Firebase"' }
+  s.dependency 'Firebase', '~> 2.5.0'
 end
