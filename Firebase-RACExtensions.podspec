@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes'
 
-  s.dependency 'ReactiveCocoa', '~> 2.3'
+  s.dependency 'ReactiveCocoa', '~> 4.0'
   s.dependency 'Firebase', '~> 2.3.2'
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Firebase"' }
 end
